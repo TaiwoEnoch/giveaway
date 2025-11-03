@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+    scrollbar-width: thin;
+}
+
+.hero {
+    background: #057578;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.hero nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+}
+
+.hero nav h4 a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.hero nav ul {
+    display: flex;
+    list-style: none;
+    gap: 12px;
+}
+
+.hero nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.toggle {
+    display: none;
+}
+
+#hero {
+    height: 90vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./images/heroImg.png') no-repeat center center/cover;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    width: 60%;
+}
+
+#hero a,
+#about .about-text a{
+    padding: 0.8rem 1.5rem;
+    background: #fff;
+    color: #057578;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    border: #057578 2px solid;
+}
+
+#about {
+    padding: 4rem 2rem;
+    background: #f4f4f4;
+}
+
+#about div {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#about img {
+    width: 300px;
+    border-radius: 10px;
+    border: #057578 2px solid;
+    padding: 5px;
+}
+
+#about .about-text {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+#about .about-text h2 {
+    margin-bottom: 1rem;
+}
+
+#about .about-text p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .hero nav ul {
+        display: none;
+        flex-direction: column;
+        background: #057578;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 150px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+    }
+
+    .toggle {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+        font-weight: 800;
+    }
+}
